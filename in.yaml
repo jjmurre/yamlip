@@ -1,0 +1,19 @@
+---
+dag_config:
+  vsd:
+    afval:
+      files:
+      - afval_weging
+    parkeerzones:
+      shp_files: 
+        - act_RDW_3EXP_VERGUNNINGGEBIED.shp 
+        - act_RDW_3EXP_UITZ_VERGUNNINGGEBIED.shp
+      tables:
+        - parkeerzones_new
+        - parkeerzones_uitz_new
+      zip_folder: 20190606_Vergunninggebieden
+      ins2: $noot
+      zip_file: "${dag_config.vsd.parkeerzones.zip_folder} v3.zip"
+      sql_rename: |
+        ALTER TABLE {{ tablename }} RENAME COLUMN gebied_cod TO gebied_code;
+        ALTER TABLE {{ tablename }} RENAME COLUMN gebied_oms TO gebied_omschrijving;
