@@ -1,32 +1,11 @@
-yamlip
-======
+# yamlip #
 
-.. image:: https://img.shields.io/pypi/v/yamlip.svg
-    :target: https://pypi.python.org/pypi/yamlip
-    :alt: Latest PyPI version
+Small tool to make internal interpolations in yaml files.
+Variables are defined according to the python string.Template sytax ($varname or ${varname}).
 
-.. image:: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal.png
-   :target: https://travis-ci.org/kragniz/cookiecutter-pypackage-minimal
-   :alt: Latest Travis CI build status
+The varnames are 'paths' in the yaml tree structure.
 
-A yaml interpolation tool
 
-Usage
------
+Note: Cannot be use recursively yet!
 
-Installation
-------------
 
-Requirements
-^^^^^^^^^^^^
-
-Compatibility
--------------
-
-Licence
--------
-
-Authors
--------
-
-`yamlip` was written by `Jan Murre <jan.murre@catalyz.nl>`_.
